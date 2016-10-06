@@ -21,9 +21,14 @@
     	var formattedHTMLbioPic = HTMLbioPic.replace("%data%", this.biopic);
     	var formattedHTMLwelcomeMsg = HTMLwelcomeMsg.replace("%data%", this.welcomeMessage);
 
-		$('#header').prepend(formattedheaderRole);
-    	$('#header').prepend(formattedheaderName);
-    	$('#topContacts').append(formattedHTMLmobile);
+
+    	
+        $('#header').prepend(HTMLheaderContainer);
+        $('.name-container').append(formattedheaderName);
+        $('.name-container').append(formattedheaderRole);
+
+
+        $('#topContacts').append(formattedHTMLmobile);
     	$('#topContacts').append(formattedHTMLemail);
         $('#topContacts').append(formattedHTMLlinkedIn);
     	$('#topContacts').append(formattedHTMLlocation);
@@ -43,6 +48,8 @@
     		$('#skills').append(formattedHTMLskills);
     	});
 
+     
+
     }
 };
 
@@ -57,13 +64,10 @@ var education = {
 	                url: ""
              	}
 	],
-	onlineCourses: [
-					{
-	                	title: "",
-		                school: "",
-		                dates: "",
-		                url: ""
-             		}
+	courses: ["Management Information Systems", "Object-Oriented Programming with Java",
+                "Intermediate Java Programming", "Database Design and Development", "Business Telecommunications",
+                "Interactive and Responsive Web Development", "Introduction to Systems Analysis and Design",
+                "E-commerce Application Development", "Advanced Java Programming", "Internet Security", "Client/Server Application Development"		
     ],
     display: function (){
     	
@@ -71,21 +75,31 @@ var education = {
     	this.schools.forEach( function(school) {
     		var formattedHTMLschoolName = HTMLschoolName.replace("%data%", school.name);
     		var formattedHTMLschoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
-	    	var formattedHTMLonlineDates = HTMLonlineDates.replace("%data%", school.dates);
-	    	var formattedHTMLonlineURL = HTMLonlineURL.replace("%data%", school.url);
 	    	var formattedHTMLschoolLocation = HTMLschoolLocation.replace("%data%", school.location);
 	    	var formattedHTMLschoolMajor = HTMLschoolMajor.replace("%data%", school.major);
 	    	
 
 	    	$('#education').append(HTMLschoolStart);
 	    	$('.education-entry').append(formattedHTMLschoolName + formattedHTMLschoolDegree);
-	    	$('.education-entry').append(formattedHTMLonlineDates);
-	    	$('.education-entry').append(formattedHTMLschoolLocation);
 	    	$('.education-entry').append(formattedHTMLschoolMajor);
-	    	$('.education-entry').append(formattedHTMLonlineURL);
 	    	
 
     	});
+
+
+        $('#education').append(HTMLcourses);
+        $('#education').append(HTMLcourseStart);
+
+        this.courses.forEach( function(courseTitle){
+            var formattedHTMLcourseTitle = HTMLcourseTitle.replace("%data%", courseTitle);
+
+            
+            
+            $('.course-entry').append(formattedHTMLcourseTitle);
+        });
+
+
+       
     }
 };
 
@@ -136,7 +150,7 @@ var projects = {
                 {
                     title: "Biclycle E-commerce Application",
                     dates: "Winter 2016",
-                    description: "Built E-commerce application with product catalog, shopping cart, checkout pages. Developed application in ASP.NET, C#, MSSQL, HTML, CSS. Built E-commerce application with product catalog, shopping cart, checkout pages. Developed application in ASP.NET, C#, MSSQL, HTML, CSS.",
+                    description: "Built E-commerce application with product catalog, shopping cart, checkout pages. Developed application in ASP.NET, C#, MSSQL, HTML, CSS.",
                     images: "images/bikeStore.jpg"    
                 }
     ],

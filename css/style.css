@@ -20,7 +20,8 @@ h6 {
 
 .education-entry,
 .work-entry,
-.project-entry {
+.project-entry,
+.course-entry {
   padding: 0 5%;
 }
 
@@ -101,7 +102,6 @@ a {
 
 #skills-h3 {
   color: #f5ae23;
-  display: none;
 }
 
 .orange {
@@ -130,6 +130,7 @@ a {
 
 #header {
   background-color: #484848;
+  display: block;
 }
 
 .flex-box {
@@ -152,6 +153,15 @@ a {
   padding: 2.5% 5%;
 }
 
+.header-item {
+   
+}
+
+.header-item:nth-of-type(1) { order: 2; } /* name */
+.header-item:nth-of-type(2) { order: 1; } /* biopic */
+.header-item:nth-of-type(3) { order: 4; } /* skills */
+.header-item:nth-of-type(4) { order: 3; } /* contact */
+
 ul {
   list-style-type: none;
 }
@@ -160,7 +170,8 @@ ul {
   float: left;
   padding: 10px;
   width: 200px;
-  display: none;
+  border-radius: 12px; 
+  /*display: none;*/
 }
 
 img {
@@ -171,14 +182,24 @@ span {
   padding: 5px;
 }
 
+.course-entry {
+  list-style-type: disc;
+}
+
+.course-entry li {
+  margin-left: 40px;
+}
 #lets-connect {
   text-align: center;
 }
 .project-image {
   width: 320px;
-  height: 200px;
+  height: 250px;
   object-fit: cover; 
 }
+
+
+
 /* Media queries */
 
 @media only screen and (max-width: 1024px) {
@@ -211,6 +232,7 @@ span {
       height: 300px;
       width: 75%;
   }
+   
 }
 
 @media only screen and (max-width: 480px) {
@@ -218,6 +240,43 @@ span {
  .project-image {
       height: 250px;
       width: 100%;
+  }
+   #skills-h3 {
+
+  }
+  .biopic {
+    float: none;
+    margin: 0 auto;
+    width: 200px;
+    display: block;
+  }
+
+  #header {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #name {
+    text-align: center;
+  }
+  
+  .role {
+    display: block;
+    text-align: center;
+  }
+  
+  hr {
+    display: none;
+  }
+
+  #topContacts {
+    display: none;
+  }
+  .skills-container {
+    width: 100%;
   }
 }
 
@@ -227,16 +286,15 @@ span {
       height: 200px;
       width: 100%;
   }
+
+
 }
 
 
 
-@media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
-  }
+@media only screen and (min-width: 480px) {
+  
 
 }
-
+ 
 
