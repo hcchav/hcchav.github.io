@@ -169,6 +169,10 @@ ul {
   border-radius: 12px; 
   /*display: none;*/
 }
+  
+#topContacts{
+  padding: 20px 0;
+}
 
 img {
   padding: 10px;
@@ -272,6 +276,7 @@ span {
   #topContacts {
     display: none;
   }
+
   .skills-container {
     width: 100%;
   }
