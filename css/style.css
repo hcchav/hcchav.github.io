@@ -81,10 +81,16 @@ h5 {
 }
 
 p {
+  /*width: 75%;*/
+}
+
+p,
+li {
   font-size: 14px;
   color: #333;
   line-height: 21px;
 }
+
 
 a {
   color: #1199c3;
@@ -95,7 +101,7 @@ a {
 
 .welcome-message {
   font-style: italic;
-  font-size: 18px;
+  font-size: 25px;
   color: #f3f3f3;
   line-height: 28px;
 }
@@ -193,7 +199,7 @@ span {
   text-align: center;
 }
 .project-image {
-  width: 320px;
+  width: 300px;
   height: 250px;
   object-fit: cover; 
 }
@@ -206,6 +212,7 @@ span {
   #lets-connect {
     margin-top: 5%;
   }
+  
 }
 
 @media only screen and (max-width:900px) {
