@@ -8,7 +8,7 @@
         location: "Ontario, CA"
     },
     welcomeMessage: "Hello, World!", 
-	skills: ["HTML", "CSS", "JavaScript"],
+	skills: ["HTML", "CSS", "JavaScript", "JQuery", "C#", "ASP.NET"],
     biopic: "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAcwAAAAJDgzYzQ4ZTRlLTNjOWYtNDg2Ny04NjAzLWI3NTIzYjNlZWQ1YQ.jpg",
     display: function (){
 
